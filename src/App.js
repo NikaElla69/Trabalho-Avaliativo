@@ -3,7 +3,6 @@ import "./App.css";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import LoginForm from "./components/LoginForm";
-import CharacterDetail from "./components/CharacterDetail";
 import Profile from "./pages/Profile";
 import { ChakraProvider } from "@chakra-ui/react";
 

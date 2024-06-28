@@ -2,7 +2,7 @@ import React from 'react';
 import LoginForm from '../components/LoginForm';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
-import { Flex, Input } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -14,8 +14,15 @@ const Home = () => {
     return (
         <div>
             <Header title={"Login"} />
-            <Flex>
-                <LoginForm onLogin={handleLogin} />
+            <Flex
+                height="100vh"
+                alignItems="center"
+                justifyContent="center"
+                backgroundImage="url('/background.png')"
+                backgroundSize="cover"
+                backgroundPosition="center"
+            >
+                <LoginForm backgroundColor="white" onLogin={handleLogin} />
             </Flex>
         </div>
     );

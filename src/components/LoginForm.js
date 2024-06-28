@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Input, Button, Box, FormControl, FormLabel, FormErrorMessage } from '@chakra-ui/react';
+import { Input, Button, Box, FormControl, FormLabel, FormErrorMessage, Flex } from '@chakra-ui/react';
 
 const LoginForm = ({ onLogin }) => {
     const [email, setEmail] = useState('');
@@ -42,7 +42,7 @@ const LoginForm = ({ onLogin }) => {
     };
 
     return (
-        <Box p={4} alignItems={"center"}>
+        <Box p={4} alignItems={"center"} bgColor={"gray.200"} boxShadow={"lg"} rounded={"lg"}>
             <FormControl id="email" mb={4} isInvalid={!!emailError}>
                 <FormLabel>Email</FormLabel>
                 <Input
@@ -50,16 +50,18 @@ const LoginForm = ({ onLogin }) => {
                     type="email"
                     value={email}
                     onChange={onChangeEmail}
+                    borderColor={"teal"}
                 />
                 <FormErrorMessage>{emailError}</FormErrorMessage>
             </FormControl>
             <FormControl id="password" mb={4} isInvalid={!!passwordError}>
-                <FormLabel>Password</FormLabel>
+                <FormLabel>Senha</FormLabel>
                 <Input
                     placeholder="Insira a sua senha aqui"
                     type="password"
                     value={password}
                     onChange={onChangePassword}
+                    borderColor={"teal"}
                 />
                 <FormErrorMessage>{passwordError}</FormErrorMessage>
             </FormControl>
@@ -69,6 +71,7 @@ const LoginForm = ({ onLogin }) => {
                 bgColor="teal.200"
                 color={"black"}
                 _hover={{ bgColor: "teal.300" }}
+                borderColor={"teal"}
             >
                 Login
             </Button>
